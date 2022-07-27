@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice</title>
+</head>
+<body>
+
+    <!-- Create element div with id application -->
+    <div id="application">
+        {{message}}
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        // declare variable
+        var app =   new Vue   ({
+            el      :   '#application',
+            data    :
+                {
+                    message :   'I am Fine',
+                }
+        });
+    </script>
+
+</body>
+</html>
