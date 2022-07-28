@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use directive v-if</title>
+</head>
+<body>
+
+<!--
+*
+* Directive is used in Vue for communication between
+* view and model
+* Problem: Enter a value between 1 and 100. Show in spanish
+* the quantity of digits than have
+*
+-->
+<div class="application">
+
+    <p>Enter a value between 1 and 100</p>
+    <input type="text" v-model="number" min="1" max="100">
+    <p v-if="number<=9">Have 1 digit</p>
+    <p v-else-if="number<=99">Have 2 digit</p>
+    <p v-else>Have 3 digits</p>
+
+</div>
+
+
+
+<script src="vue.js"></script>
+<script>
+    // declare var
+    var app =   new Vue({
+        el      :   '.application',
+        data    :
+            {
+                number  :   1,
+            }
+    });
+</script>
+</body>
+</html>
