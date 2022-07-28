@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use v-show directive Vue</title>
+</head>
+<body>
+
+<div class="application">
+    <input type="text" v-model="number">
+    <p v-show="number>50" style="display: block">Hello World</p>
+</div>
+
+
+<script src="vue.js"></script>
+<script>
+    // declare var
+    var app =   new Vue({
+        el      :   '.application',
+        data    :
+            {
+                number  :   1,
+            }
+    });
+</script>
+</body>
+</html>
