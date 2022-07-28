@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Directives v-if v-else v-else-if and v-show</title>
+</head>
+<body>
+    <div class="application">
+        <p>Enter a age:
+            <input type="text" v-model="age">
+        </p>
+        <!-- Compare with string and compare with int -->
+        <p v-if="age=='maria' || age >= 18 ">Is adult!</p>
+    </div>
+
+<script src="vue.js"></script>
+
+<script>
+    // declare variable
+    var app =   new Vue({
+        el      :   '.application',
+        data    :
+            {
+                age :   ''
+            }
+    })
+</script>
+</body>
+</html>
