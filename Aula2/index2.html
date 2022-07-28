@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Directives Vue</title>
+</head>
+<body>
+
+<!--
+*
+* A directive is an attribute to HTML element
+*
+-->
+<div class="application">
+    <input type="text" v-model="name">
+    <input type="text" v-model="cidade">
+    <p> Olá {{name}}</p>
+<!--    <p  @mouseover  =   "isHovering =   true"-->
+<!--        @mouseout   =   "isHovering =   false"-->
+<!--        :class      =   "{hovering:isHovering}">-->
+<!--        {{ lastname ? "Olá" : "Olá" }}-->
+<!--        {{name}} {{lastname}}-->
+<!--    </p>-->
+    <p class="isfreeShipping">
+        {{cidade === "São Paulo" || cidade === "Rio" ? "Frete Gratis" : ""}}
+    </p>
+</div>
+
+<style>
+    .isfreeShipping
+    {
+        color: green;
+    }
+    /*.PaidShipping*/
+    /*{*/
+    /*    color: red;*/
+    /*}*/
+</style>
+
+<script src="vue.js"></script>
+<script>
+    // declare variables and attributes
+    var app =   new Vue({
+       el           :   '.application',
+       data         :
+                {
+                   name         :   '',
+                   cidade       :   '',
+                },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Directives Vue</title>
+</head>
+<body>
+
+    <!--
+     *
+     * A directive is an attribute to HTML element
+     *
+     -->
+    <div id="application">
+        <input type="text" v-model="name">
+        <p>{{name}}</p>
+    </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+
+        /* Declare variable and attributes el "and" "data/name" that matches the value
+         * stored in v-model directive. The directive bidirectionally associates the
+         * visual part(input control) and our data model
+         */
+        var app =   new Vue({
+           el   :   '#application',
+           data :
+               {
+                   name :   ''
+               }
+        });
+
+    </script>
+</body>
+</html>
