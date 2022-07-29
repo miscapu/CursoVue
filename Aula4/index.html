@@ -5,27 +5,31 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Use v-show directive Vue</title>
+    <title>V-for</title>
 </head>
 <body>
 
-<!-- Directive v-show change display for display:none -->
-<div class="application">
-    <input type="text" v-model="number">
-    <p v-show="number>50" style="display: block">Hello World</p>
-</div>
-
+    <div id="application">
+        <ul>
+            <li v-for="language in languages">
+                {{language}}
+            </li>
+        </ul>
+    </div>
 
 <script src="vue.js"></script>
 <script>
     // declare var
     var app =   new Vue({
-        el      :   '.application',
+        el      :   '#application',
         data    :
             {
-                number  :   1,
+                languages   :
+                [
+                    'C', 'C++', 'C#', 'Java', 'Ruby', 'Kotlin'
+                ]
             }
-    });
+    })
 </script>
 </body>
 </html>

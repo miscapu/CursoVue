@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="a7804f1c-f63d-4b7e-97ba-2b06cddb5daf" name="TesteMiSCapu" url="http://ftp.itechsolutionsbr.com">
-        <fileTransfer host="ftp.itechsolutionsbr.com" port="21">
+      <webServer id="fe1e4a3a-3b53-4cfd-a20c-971f163e7f9e" name="Deglog" url="http://ftp.deglog.com.br">
+        <fileTransfer host="ftp.deglog.com.br" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
