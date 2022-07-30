@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-for directive using arrays</title>
+</head>
+<body>
+
+<!--
+*
+* We have the following array with objects literals
+* representing items:
+*
+* items: [{
+            code:1,
+            description:'potatoes',
+            price: 12.52,
+            },
+            {
+                code:2,
+                description:'oranges',
+                price:11.30
+            },{
+                code: 3,
+                description:  'lemon',
+                price: 12.30,
+            }
+        }]
+*
+-->
+
+<div class="application">
+    <table border="1">
+        <tr>
+            <td>
+                Code
+            </td>
+            <td>
+                Description
+            </td>
+            <td>
+                Price
+            </td>
+        </tr>
+            <template v-for="article in articles">
+                <tr>
+                    <td>{{article.code}}</td>
+                    <td>{{article.description}}</td>
+                    <td>{{article.price}}</td>
+                </tr>
+            </template>
+        </tr>
+    </table>
+</div>
+
+
+
+<script src="vue.js"></script>
+<script>
+    // declare var
+    var app =   new Vue({
+        el      :   '.application',
+        data    :
+            {
+                articles   :
+                    [
+                        {
+                            code        :   1,
+                            description :   'potatoes',
+                            price       :   12.33,
+                        },
+                        {
+                            code        :   2,
+                            description :   'lemons',
+                            price       :   13.33,
+                        },
+                        {
+                            code        :   3,
+                            description :   'oranges',
+                            price       :   13.22,
+                        }
+                    ]
+            }
+    });
+</script>
+
+</body>
+</html>
