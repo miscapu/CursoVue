@@ -11,14 +11,14 @@
 
 <div class="application">
     <table border="1">
-        <tr>
+        <tr style="font-weight: bold; color: red; text-align: center">
             <td>ID</td>
             <td>Name</td>
             <td>Email</td>
         </tr>
         <template v-for="data in datas">
             <tr>
-                <td>{{data.ID}}</td>
+                <td><strong>{{data.ID}}</strong></td>
                 <td>{{data.name}}</td>
                 <td>{{data.email}}</td>
             </tr>
