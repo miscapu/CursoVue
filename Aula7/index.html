@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-on directive keypress keyup</title>
+</head>
+<body>
+<div class="application">
+    <h1>Activities List</h1>
+    <ol>
+        <li v-for="activity in activities">
+            {{activity}}
+        </li>
+    </ol>
+    New Activity: <input type="text" v-on:keyup.enter="updateList" v-model="activity" placeholder="Enter to confirm">
+</div>
+
+
+<script src="vue.js"></script>
+<script>
+    // declare var
+    var app  =   new Vue({
+        el      :   '.application',
+        data    :
+            {
+                activity    :   '',
+                activities  :   [
+                    '1',
+                ],
+
+            },
+        methods :
+            {
+                updateList  :   function ()
+                {
+                    this.activities.push( this.activity );
+                    this.activity   =   '';
+                }
+            }
+    });
+
+</script>
+</body>
+</html>
