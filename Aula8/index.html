@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events v-on:submit</title>
+</head>
+<body>
+<!--
+*
+* Use input submit: we show prevent to send and execute JS with Vue
+* Problem:
+* Store in array item codes, their descriptions and prices.
+* Show the data in an HTML table and through an HTML form
+* allow entering new data in the array
+*
+-->
+<div class="application">
+    <table style="border: solid 1px">
+        <tr>
+            <td>Code</td>
+            <td>Description</td>
+            <td>Price</td>
+        </tr>
+        <template v-for="article in articles">
+            <tr>
+                <td>{{article.code}}</td>
+                <td>{{article.description}}</td>
+                <td>{{article.price}}</td>
+            </tr>
+        </template>
+    </table>
+
+    <form v-on:submit.prevent="addArticle">
+        <label for="code">Code</label>
+            <input type="number" id="code" v-model="code">
+        <br>
+        <label for="description">Description</label>
+            <input type="text" id="description" v-model="description">
+        <br>
+        <label for="price">Price</label>
+            <input type="number" id="price" v-model="price">
+        <br>
+        <input type="submit" value="Add"></input>
+    </form>
+</div>
+
+
+<script src="vue.js"></script>
+<script>
+    // Declare var
+    var app =   new Vue({
+        el      :     '.application',
+        data    :
+            {
+                code            :   '',
+                description     :   '',
+                price           :   '',
+
+                articles        :
+                    [
+                        {
+                            code        :   1,
+                            description :   'potatoes',
+                            price       :   22
+                        }
+                    ]
+            },
+        methods :
+            {
+                addArticle  : function ()
+                {
+                    this.articles.push({
+                        code        :   this.code,
+                        description :   this.description,
+                        price       :   this.price,
+                    });
+                        this.code           =   '';
+                        this.description    =   '';
+                        this.price          =   '';
+                }
+            }
+    });
+</script>
+</body>
+</html>
