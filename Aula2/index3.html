@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use of Template with Vue instance</title>
+</head>
+<body>
+
+    <h1>Vue Instance, using Template</h1>
+
+    <div class="app">
+        This will replaced!
+    </div>
+
+    <!-- Reference To Vue.js library -->
+    <script src="vue.js"></script>
+
+    <!-- Script element for our App -->
+    <script>
+        var app =    new Vue({
+            el          :   '.app',
+            data        :
+                {
+                    propertyName    :   'Hello, Bye'
+                },
+            template    :   '<div>{{propertyName}}</div>'
+        });
+    </script>
+
+</body>
+</html>
