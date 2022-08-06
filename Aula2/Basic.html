@@ -67,5 +67,54 @@
             and nullProperty, and null assigned accordingly in the app.
         </p>
 
+        <p>Names of the properties of the data object must not
+        start with $ or _. Any properties that start with $ or _ will
+        not be added to the reactive system, as they might cause
+        conflicts with Vue's internal properties and methods.
+        Since they won't  be added to the reactive system, they also
+        can't be accessed in the template.
+        Using a value that begins with either $ or _ in the template
+        will cause an error.
+        Trying to use these values in the template causes a reference error
+        at the runtime, since Vue does not hace references to these
+        to these properties in the reactive system.
+        </p>
+        <p>If you do include a property that starts with a $
+        or _, you can access it on you instance of Vue from the
+        $data property.
+        When an instance of Vue is created, the data object
+        originally included is added to the instance as a
+        property with the name $data.
+        So, if you assign your Vue instance to a variable
+        called app, you can access the original data object
+        at app.$data.propertyName. You will also  be able
+        to access it in methods using the this context instead
+        of through a saved reference to the this.$data.propertyName
+        instance.
+        </p>
+    <h2>Methods</h2>
+        <p>
+            As with all things JavaScript, you will eventually
+            need to perform an action when the user insteracts with
+            the app.
+            And while it's possible to do some rudimentary expressions
+            in an event binding, anything more complex than adding two
+            small numbers should probably be in Javascript so that's
+            easier to maintain and understand.
+            We can do that with methods.
+        </p>
+        <p>
+            Using method, we can create custom code that will be
+            bound to our instance of Vue. We can then access these
+            methods from a reference to our Vue instance. When
+            creating methods for our Vue instance, we need to
+            avoid using the arrow function ()=>{}, as it will
+            prevent us from being able to access the proper context
+            of this.
+            We have one method called userClickedAButton. In teory,
+            we will add an event handler to a button to call this at
+            some point; For more information about events and binding
+        </p>
+
 </body>
 </html>
