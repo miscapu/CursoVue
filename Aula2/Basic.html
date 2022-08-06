@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The basics</title>
+</head>
+<body>
+
+<h1>The Basics</h1>
+    <p>Before we can get too far into understanding Vue, we need
+        to cover a few things.
+        We start off by learning what options we have when creating an
+        instance o Vue. After we have an understanding of what we can
+        provide Vue to make it suit our needs, we look at how at how can start
+        binding it to HTML, with a look at the templating syntax.
+    </p>
+    <h2>Vue options</h2>
+    <p>
+        Before we get too far, we shoould learn more about the options
+        that are available when creating a Vue instance.
+        In Class 1, we created an instance by using the bare minimum of options
+        to get Vue to render the <strong>data</strong> and the <strong>el</strong>
+        property on the page in order to specify when the Vue instance should be
+        and what data it would have access to.
+    </p>
+    <h2>El Property</h2>
+    <p>
+        The <strong>el</strong> property we talked about allows us to specify
+        where our Vue instance will mount on the page. The value you provide
+        can be a string that is a CSS selector (such as #app), as shown in example before.
+    </p>
+    <h2>Template</h2>
+    <p>
+        All this talk about Vue using a template means we should probably cover how to pass
+        a template in as part of the options object. When you're creating a new Vue instance,
+        one of the options you can provide as a property is template.
+        The template string is used by Vue to generate the DOM it will be placing in the
+        web page in place of the element that was selected with the <strong>el</strong> option.
+        It must have one root element. This will replace anything that is inside the element
+        that the instance of Vue gets mounted to.
+    </p>
+
+
+</body>
+</html>
