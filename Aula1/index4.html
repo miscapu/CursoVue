@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getting Started Vue.js</title>
+</head>
+<body>
+<!-- Div to mount App -->
+<div id="app">
+    {{propertyName}}
+</div>
+
+
+<!-- Reference to Vue.js library -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- Script Element for our first App -->
+<script>
+    // Create a new instance Vue.js
+    var app =   new Vue({
+       // To tell to our instance Vue.js where to mount options object
+       el   :   '#app',
+       // To give it some data, we will use the "data" property of the
+       // options object.
+       data :   {
+           propertyName : 'Hello from Getting to Know Vue.js!'
+       }
+    });
+</script>
+</body>
+</html>
