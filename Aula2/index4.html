@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use Template one more time</title>
+</head>
+<body>
+
+<div id="app">
+    {{propertyName}}
+</div>
+
+
+<script src="vue.js"></script>
+<!-- Script Element for our Template -->
+<script id="myTemplate" type="x-template">
+    <div>
+        From Script Element Template: {{ propertyName }}
+    </div>
+</script>
+<!-- Script Element for our App -->
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            propertyName: 'Hello from Getting to Know Vue.js! Using a template',
+        },
+        template: '#myTemplate'
+    });
+</script>
+
+
+</body>
+</html>
