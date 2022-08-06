@@ -48,6 +48,24 @@
     are declared.
     </p>
 
+    <h2>Data</h2>
+        <p>We use the data property to tell our instance what shape
+        our data will resemble. If there is something we want to be
+        able to bind to in our Vue instance, we need to include in the data
+        before we create our Vue instance
+        </p>
+        <p>
+            When a new Vue instance is created, it adds all the properties of data
+            to a eactive system. The vue reactive system monitors the properties of the
+            data object for changes and updates the view to "react" to these change.
+            This means we cannot add new data to be monitored by Vue's system after the
+            application starts. If, at the time you create your Vue instance, you don't know
+            what the values of your data properties will be, define them with the names
+            and give them a value of an empty string--", null ou undefined. Don't use
+            the empty {}, as that will render the stringified JSON of the empty oject.
+            Say your HTML looked like, with 3 data properties emptyObject, emptyString
+            and nullProperty, and null assigned accordingly in the app.
+        </p>
 
 </body>
 </html>
